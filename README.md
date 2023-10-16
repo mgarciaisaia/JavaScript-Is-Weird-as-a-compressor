@@ -69,8 +69,8 @@ $
 Inspecting the code, it had [a hard-coded call to the `compile` function
 with the `console.log("Hello, world!");` code in it](https://github.com/lowbyteproductions/JavaScript-Is-Weird/blob/7245b1e1dc22c900b50f254c9ea0e375ec597eba/index.js#L45). So I quickly
 [changed the program to receive the name of the source file as a command
-line argument](https://github.com/mgarciaisaia/JavaScript-Is-Weird-as-a-compressor/commit/a538bf7b7545c2a6eb4b12b04ee9a3910d50cda4)
-- by asking ChatGPT for that trivial piece of code.
+line argument](https://github.com/mgarciaisaia/JavaScript-Is-Weird-as-a-compressor/commit/a538bf7b7545c2a6eb4b12b04ee9a3910d50cda4) -
+by asking ChatGPT for that trivial piece of code.
 
 I've ran the program against itself, and checked that it kinda worked -
 it was producing some output, but I couldn't ran itself once again
