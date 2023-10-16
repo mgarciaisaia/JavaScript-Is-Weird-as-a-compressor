@@ -42,4 +42,21 @@ map.C = `((()=>{})[${fromString('constructor')}](${fromString('return escape')})
 
 const compile = code => `(()=>{})[${fromString('constructor')}](${fromString(code)})()`;
 
-console.log(compile('console.log("Hello world!");'));
+const fs = require('fs');
+
+// Check if a filename is provided as a command line argument
+if (process.argv.length < 3) {
+  console.error('Usage: node weird.js <filename>');
+  process.exit(1); // Exit with an error code
+}
+
+const filename = process.argv[2]; // Get the filename from the command line arguments
+
+// Use fs.readFile to read the content of the file
+fs.readFile(filename, 'utf8', (err, data) => {
+  if (err) {
+    console.error(`Error reading the file: ${err.message}`);
+  } else {
+    console.log(compile(data));
+  }
+});
